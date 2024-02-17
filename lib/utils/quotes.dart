@@ -8,15 +8,15 @@ List quotes = [
 ];
 
 List<String> articleTitle = [
-  "Pakistani women are inspiring country",
-  "We have to end Violance",
-  "Be a change",
-  "You are strong"
+  "Women are Inspiration",
+  "Women against Violance",
+  "Bring a change",
+  "Be the pioneer"
 ];
 
 List<String> imageSliders = [
-  "https://media.istockphoto.com/photos/silhouette-of-super-strong-successful-businesswoman-picture-id1249879109?k=20&m=1249879109&s=612x612&w=0&h=I-joEMjqkq1wCJZJeLWUCd1d2HcB5WxBShdkA9YM0cg=",
-  "https://media.istockphoto.com/vectors/young-woman-looks-at-the-mirror-and-sees-her-happy-reflection-vector-id1278815846?k=20&m=1278815846&s=612x612&w=0&h=JUTmV9Of-_ILOfXBfV9Cmp_41yuTliSdFIcZy5LKuss=",
-  "https://media.istockphoto.com/vectors/mental-health-or-psychology-concept-with-flowering-human-head-vector-id1268669581?k=20&m=1268669581&s=612x612&w=0&h=YVLTKCZXKugEn40aqOkir4vcoFeTUAQToa1i3AFYRNU=",
-  "https://media.istockphoto.com/photos/confidence-and-strength-concept-picture-id1086700012?k=20&m=1086700012&s=612x612&w=0&h=1wWVN3AB7BH7o3y2A2b-NG3HB9H6Dwkc9OLz2lxgwAY=",
+  "https://www.thenews.com.pk/assets/uploads/updates/2023-03-08/1047750_6464626_google-doodle_updates.jpg",
+  "https://t3.ftcdn.net/jpg/04/48/95/26/360_F_448952652_9RS6K0XjIS07Po2WgADLxSuTSlaN3frZ.jpg",
+  "https://st4.depositphotos.com/3680661/41656/v/450/depositphotos_416566904-stock-illustration-abstract-doodle-girls-background-adult.jpg",
+  "https://media.istockphoto.com/id/1205456753/vector/the-woman-looks-through-her-large-binoculars-looking-for-something.jpg?s=612x612&w=0&k=20&c=VRxKZ3gnoqyXYzccO1i47OaC8h4qVh6y0xf1l7jIH9Q=",
 ];
