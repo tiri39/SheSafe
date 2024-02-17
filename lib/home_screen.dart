@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:shesafe/widgets/custom_Carousel.dart';
 import 'package:shesafe/widgets/custom_appBar.dart';
 
 class HomeScreen extends StatefulWidget{
@@ -39,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: getRandomQuotes,
 
               ),
+              CustomCarousel(),
             ],),
         ),
       )
