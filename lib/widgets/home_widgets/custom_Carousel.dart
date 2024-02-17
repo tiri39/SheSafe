@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shesafe/utils/quotes.dart';
-import 'package:shesafe/widgets/safewebview.dart';
+import 'package:shesafe/widgets/home_widgets/safewebview.dart';
 
 
 class CustomCarousel extends StatelessWidget{

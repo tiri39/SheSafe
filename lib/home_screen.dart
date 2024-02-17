@@ -1,8 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:shesafe/widgets/custom_Carousel.dart';
-import 'package:shesafe/widgets/custom_appBar.dart';
+import 'package:flutter/widgets.dart';
+import 'package:shesafe/widgets/home_widgets/custom_Carousel.dart';
+import 'package:shesafe/widgets/home_widgets/custom_appBar.dart';
+import 'package:shesafe/widgets/home_widgets/emergency.dart';
 
 class HomeScreen extends StatefulWidget{
   @override
@@ -40,7 +42,24 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: getRandomQuotes,
 
               ),
-              CustomCarousel(),
+              Expanded(
+                child: ListView(
+                  shrinkWrap: true,
+                  children: [
+                    CustomCarousel(),
+                    Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text("Emergency Hotlines",
+                    style: TextStyle(
+                    fontSize : 20, fontWeight: FontWeight.bold,)
+                    ),
+                ),
+                Emergency(),
+                ]
+
+                ),
+              ),
+              
             ],),
         ),
       )
