@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:shesafe/widgets/home_widgets/custom_Carousel.dart';
 import 'package:shesafe/widgets/home_widgets/custom_appBar.dart';
 import 'package:shesafe/widgets/home_widgets/emergency.dart';
+import 'package:shesafe/widgets/home_widgets/safehome/SafeHome.dart';
 import 'package:shesafe/widgets/livesafe.dart';
 
 class HomeScreen extends StatefulWidget{
@@ -64,6 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                 ),
                 LiveSafe(),
+                SafeHome(),
                 ]
 
                 ),
