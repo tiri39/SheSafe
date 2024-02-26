@@ -6,9 +6,23 @@ import 'package:shesafe/components/primary_button.dart';
 import 'package:shesafe/components/secondary_button.dart';
 import 'package:shesafe/utils/constants.dart';
 
-class LoginScreen extends StatelessWidget{
-  const LoginScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget{
+  
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
 
+class _LoginScreenState extends State<LoginScreen> {
+  bool isPasswordShown = true;
+  final _formKey = GlobalKey<FormState>();
+  final _formData = Map<String, Object>();
+
+
+  _onSubmit(){
+    _formKey.currentState!.save();
+    print(_formData['email']);
+    print(_formData['password']);
+  }
 
   @override 
   Widget build(BuildContext context){
@@ -42,24 +56,58 @@ class LoginScreen extends StatelessWidget{
               
               Container(
                 height: MediaQuery.of(context).size.height*0.4,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CustomTextField(
-                        hint: 'enter email',
-                        prefix: Icon(Icons.person),
-                        
-                      ),
-                      CustomTextField(
-                      hint: 'enter password',
-                      prefix: Icon(Icons.password),
+                  child: Form(
+                    key: _formKey,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        CustomTextField(
+                          hint: 'enter email',
+                          textInputAction: TextInputAction.next,
+                          keyboardtype: TextInputType.emailAddress,
+                          prefix: Icon(Icons.email),
+                          onsave: (email){
+                            _formData['email'] = email ?? "";
+                          },
+                          validate: (email){
+                            if(email!.isEmpty || email.length<3 || !email.contains('@')){
+                              return 'enter correct email';
+                            }
+                            return null;
+                          },
+                        ),
+                        CustomTextField(
+                        hint: 'enter password',
+                        prefix: Icon(Icons.vpn_key_rounded),
+                        onsave: (password){
+                          _formData['password'] = password ?? "";
+                         },
+                        validate: (password){
+                            if(password!.isEmpty || password.length<7){
+                              return 'enter correct password';
+                            }
+                            return null;
+                          },
+                        suffix: IconButton(onPressed: (){
+                          setState(() {
+                            isPasswordShown = !isPasswordShown;
                     
+                          });
+                          
+                        }, icon: isPasswordShown
+                          ? Icon(Icons.visibility_off)
+                          : Icon(Icons.visibility)),
+                      
+                      ),
+                      PrimaryButton(
+                        title: 'Register',
+                        onPressed: (){
+                          if(_formKey.currentState!.validate()){
+                          _onSubmit();}
+                        },
+                      ),
+                      ],
                     ),
-                    PrimaryButton(
-                      title: 'Register',
-                      onPressed: (){},
-                    ),
-                    ],
                   ),
               ),
               Container(
