@@ -5,7 +5,7 @@ import 'package:shesafe/components/custom_textfield.dart';
 import 'package:shesafe/components/primary_button.dart';
 import 'package:shesafe/components/secondary_button.dart';
 import 'package:shesafe/utils/constants.dart';
-import 'package:shesafe/widgets/register_child.dart';
+import 'package:shesafe/child/register_child.dart';
 
 class LoginScreen extends StatefulWidget{
   

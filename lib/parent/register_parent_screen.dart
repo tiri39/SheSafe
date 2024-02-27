@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:shesafe/components/custom_textfield.dart';
 import 'package:shesafe/components/primary_button.dart';
 import 'package:shesafe/components/secondary_button.dart';
-import 'package:shesafe/login_screen.dart';
+import 'package:shesafe/child/child_login_screen.dart';
 import 'package:shesafe/utils/constants.dart';
 
-class RegisterChildScreen extends StatefulWidget{
+class RegisterParentScreen extends StatefulWidget{
   @override
-  State<RegisterChildScreen> createState() => _RegisterChildScreenState();
+  State<RegisterParentScreen> createState() => _RegisterParentScreenState();
 }
 
-class _RegisterChildScreenState extends State<RegisterChildScreen> {
+class _RegisterParentScreenState extends State<RegisterParentScreen> {
   bool isPasswordShown = true;
 
   final _formKey = GlobalKey<FormState>();
@@ -38,7 +38,7 @@ class _RegisterChildScreenState extends State<RegisterChildScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                           Text(
-                              "REGISTER AS CHILD",
+                              "REGISTER AS PARENT",
                               style: TextStyle(
                               fontSize: 20,
                               color: primaryColor,
@@ -106,15 +106,15 @@ class _RegisterChildScreenState extends State<RegisterChildScreen> {
                             },
                           ),
                           CustomTextField(
-                            hint: 'enter guardian email',
+                            hint: 'enter child email',
                             textInputAction: TextInputAction.next,
                             keyboardtype: TextInputType.emailAddress,
                             prefix: Icon(Icons.email),
-                            onsave: (gemail){
-                              _formData['gemail'] = gemail ?? "";
+                            onsave: (cemail){
+                              _formData['cemail'] = cemail ?? "";
                             },
-                            validate: (gemail){
-                              if(gemail!.isEmpty || gemail.length<3 || !gemail.contains('@')){
+                            validate: (cemail){
+                              if(cemail!.isEmpty || cemail.length<3 || !cemail.contains('@')){
                                 return 'enter correct email';
                               }
                               return null;

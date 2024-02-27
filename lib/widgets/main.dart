@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shesafe/home_screen.dart';
+import 'package:shesafe/widgets/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shesafe/login_screen.dart';
+import 'package:shesafe/child/child_login_screen.dart';
 
 void main() {
   runApp(const MyApp());
