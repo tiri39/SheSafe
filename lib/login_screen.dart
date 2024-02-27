@@ -5,6 +5,7 @@ import 'package:shesafe/components/custom_textfield.dart';
 import 'package:shesafe/components/primary_button.dart';
 import 'package:shesafe/components/secondary_button.dart';
 import 'package:shesafe/utils/constants.dart';
+import 'package:shesafe/widgets/register_child.dart';
 
 class LoginScreen extends StatefulWidget{
   
@@ -55,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               
               Container(
-                height: MediaQuery.of(context).size.height*0.4,
+                height: MediaQuery.of(context).size.height*0.55,
                   child: Form(
                     key: _formKey,
                     child: Column(
@@ -100,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       
                       ),
                       PrimaryButton(
-                        title: 'Register',
+                        title: 'LOGIN',
                         onPressed: (){
                           if(_formKey.currentState!.validate()){
                           _onSubmit();}
@@ -123,7 +124,10 @@ class _LoginScreenState extends State<LoginScreen> {
                    ),
               ),
             
-              SecondaryButton(title: "Register new user", onPressed: (){},),
+              SecondaryButton(title: "Register new user", onPressed: (){
+                goTo(context, RegisterChildScreen());
+
+              },),
             ],
           ),
         ),),
